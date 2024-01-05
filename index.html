@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg" href="assets/img/iconPortfolio.png"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <meta name="author" content="Mathias Pochot" />
+        <meta name="description" content="Portfolio - Mathias Pochot" />
+        <meta name="keywords" content="Portfolio, Mathias Pochot, Pochot, BTS SIO"/>
+        <title>Portfolio - Mathias Pochot</title>
+    </head>
+    <body>
+        <header>
+            <div id="sideNav">
+                <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#presentation">Présentation</a>
+                <a href="#competences">Compétences</a>
+                <a href="#etudes">Etudes</a>
+                <a href="#experiencesPro">Expériences professionnelles</a>
+                <a href="#loisirs">Loisirs</a>
+                <a href="#realisations">Réalisations</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <h1>Portfolio - Mathias Pochot</h1>
+        </header>
+        <main>
+            <section id="presentation">
+                <article id="img"><img src="assets/img/imgEcureuil.jpg"></article>
+                <article id="textPresentation">
+                    <h3>Présentation</h3>
+                    <p>
+                        <ul>
+                            <li>Etudiant Bac+2 BTS SIO option SLAM</li>
+                            <li>20 ans</li>
+                        </ul>
+                    </p>
+                    <h3>Contact</h3>
+                    <p>
+                        <ul>
+                            <li>mathiaspochot@gmail.com</li>
+                            <li>GitHub : maptas</li>
+                            <li>Instagram : mathias_pcht</li>
+                        </ul>
+                    </p>
+                    <ul>
+                        <li><input type="button" value="Télécharger CV &#10132;" class="btn btn-warning" id="btnCV"></li>
+                        <li><input type="button" value="Tableau de compétences &#10132;" class="btn btn-warning"></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="theInfo">
+                <article id="competences" onmouseover="animationArticle('competences')" onmouseout="stopAnimationArticle('competences')">
+                    <h3>Mes compétences</h3>
+                    <a>
+                        <ul>
+                            <li>
+                                Programmation Logiciel
+                                <ul>
+                                    <li>C#</li>
+                                    <li>Java</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Programmation WEB
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning" id="btnVoirPlus">
+                    </a>
+                </article>
+                <article id="etudes" onmouseover="animationArticle('etudes')" onmouseout="stopAnimationArticle('etudes')">
+                    <h3>Mes études</h3>
+                    <a>
+                        <ul>
+                            <li>Bac Technologique STI2D</li>
+                            <li>1ère année BUT Informatique</li>
+                            <li>BTS SIO</li>
+                        </ul>
+                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning" id="btnVoirPlus">
+                    </a>
+                </article>
+                <article id="experiencesPro" onmouseover="animationArticle('experiencesPro')" onmouseout="stopAnimationArticle('experiencesPro')">
+                    <h3>Mes expériences professionnelles</h3>
+                    <a>
+                        <ul>
+                            <li>
+                                Stages
+                                <ul>
+                                    <li>CUB Architecture</li>
+                                    <li>Soft Skills</li>
+                                    <li>Alsim Simulator</li>
+                                    <li>Enerlis</li>
+                                </ul>
+                            </li>
+                            <li>
+                                CTT et autres
+                                <ul>
+                                    <li>Blondel Manutention</li>
+                                    <li>Boulangerie La Carolingiène</li>
+                                    <li>Exploitation maraichère</li>
+                                    <li>Restaurant On The Pig's Back</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning" id="btnVoirPlus">
+                    </a>
+                </article>
+                <article id="loisirs" onmouseover="animationArticle('loisirs')" onmouseout="stopAnimationArticle('loisirs')">
+                    <h3>Mes loisirs</h3>
+                    <p>Je suis passionné par l'informatique et la technologie en général. 
+                        J'arrive à trouver mon bonheur dans la programmation bien que cela peut parraitre pas très passionnant.
+                        J'aime aussi le sport et la musique.
+                    </p>
+                </article>
+                <article id="veille" onmouseover="animationArticle('veille')" onmouseout="stopAnimationArticle('veille')">
+                    <h3>Ma veille</h3>
+                    <p></p>
+                </article>
+            </section>
+            <!-- <section id="realisations">
+                <h3>Mes réalisations<hr/></h3>
+                <div id="timeline">
+                    <div class="container left">
+                        <div class="content">
+                            <h4>Juin 2023</h4>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h4>Mai 2023</h4>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h4>Février 2023</h4>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h4>Proj 2022</h4>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h4>Novembre 2021</h4>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h4>Juin 2021</h4>
+                        </div>
+                    </div>
+                </div>
+                <article id="Proj1">
+        
+                </article>
+                <article id="Proj2">
+        
+                </article>
+                <article id="Proj3">
+        
+                </article>
+                <article id="Proj4">
+        
+                </article>
+                <article id="Proj5">
+        
+                </article>
+            </section> -->
+            <section id="realisation">
+                <h3 id="titreRealisaton">Mes réalisations<hr/></h3>
+                <div class="container">
+                    <div class="timeline">
+                            <div class="timeline-row" id="proj1" onmouseover="animationArticle('proj1')" onmouseout="stopAnimationArticle('proj1')">
+                                <div class="timeline-time">
+                                    Novembre<small>2023</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <i class="icon-attachment"></i>
+                                    <h4>Application de gestion de colis</h4>
+                                    <p>
+                                        Ce projet de site WEB consiste à gérer la des commandes de leur création à leur envoie avec un suivi de l'envoie à la réception. 
+                                        Il a été réalisé en HTML, CSS, Bootstrap, JavaScript avec le framework Symfony en 2ème année de BTS SIO.
+                                    </p>
+                                    <div class="btn">
+                                        <input type="button" class="btn btn-warning" value="Voir plus &#10132">
+                                    </div>
+                                    <div class="">
+                                        <span class="badge badge-pill">Gestion</span>
+                                        <span class="badge badge-pill">Site Web</span>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="timeline-row"  id="proj2" onmouseover="animationArticle('proj2')" onmouseout="stopAnimationArticle('proj2')">
+                                <div class="timeline-time">
+                                    Juin<small>2023</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <i class="icon-code"></i>
+                                    <h4>Carte intéractive</h4>
+                                    <p>
+                                        Ce projet a été réalisé durant mon stage de 1ère année chez Alsim Simulateur. C'est une carte intéractive servant aux commerciaux de l'entreprise.
+                                        Elle leur sert à voir leur clients dans le monde grâce à différents icônes de couleur. 
+                                        Il a été réalisé en HTML, CSS et JavaScript avec le framework Openlayers.   
+                                    </p>
+                                    <div class="btn">
+                                        <input type="button" class="btn btn-warning" value="Voir plus &#10132">
+                                    </div>
+                                    <div class="">
+                                        <span class="badge badge-pill">Carte</span>
+                                        <span class="badge badge-pill">Application Interne</span>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="timeline-row" id="proj3" onmouseover="animationArticle('proj3')" onmouseout="stopAnimationArticle('proj3')">
+                                <div class="timeline-time">
+                                    Février<small>2023</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <i class="icon-turned_in_not"></i>
+                                    <h4>Psycho Quiz</h4>
+                                    <p>
+                                        Ce projet réalisé en 1ère année de BTS SIO est un jeu destiné aux élèves des années suivantes de la formation. 
+                                        Il consite à une série de question pour détérminé la spécialité des nouveaux élèves grâce à un score calculé.
+                                        Il a été fait en C#.
+                                    </p>
+                                    <div class="btn">
+                                        <input type="button" class="btn btn-warning" value="Voir plus &#10132">
+                                    </div>
+                                    <div>
+                                        <span class="badge badge-pill">Jeu</span>
+                                        <span class="badge badge-pill">IHM</span>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="timeline-row" id="proj4" onmouseover="animationArticle('proj4')" onmouseout="stopAnimationArticle('proj4')">
+                                <div class="timeline-time">
+                                    Novembre<small>2022</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <i class="icon-directions"></i>
+                                    <h4>Fiche métier</h4>
+                                    <p>
+                                        Ce projet a été réalisé en 1ère année de BTS SIO. C'est un site WEB exposant un métier choisi au paravant : Développeur mobile.
+                                        Il a été fait en HTML, CSS et Bootstrap.
+                                    </p>
+                                    <div class="btn">
+                                        <input type="button" class="btn btn-warning" value="Voir plus &#10132">
+                                    </div>
+                                    <div>
+                                        <span class="badge badge-pill">Site WEB</span>
+                                        <span class="badge badge-pill">Présentation</span>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="timeline-row" id="proj5" onmouseover="animationArticle('proj5')" onmouseout="stopAnimationArticle('proj5')">
+                                <div class="timeline-time">
+                                    Novembre<small>2021</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <i class="icon-change_history"></i>
+                                    <h4>Jeu de Yams</h4>
+                                    <p>
+                                        Ce projet a été réalisé en 1ère année de BUT Informatique. Le but est de créer un jeu de Yams en console avec plusieurs joueurs et plusieurs tours.
+                                        Il a été fait en C.
+                                    </p>
+                                    <div class="btn">
+                                        <input type="button" class="btn btn-warning" value="Voir plus &#10132">
+                                    </div>
+                                    <div>
+                                        <span class="badge badge-pill">Jeu</span>
+                                        <span class="badge badge-pill">Application console</span>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="timeline-row" id="proj6" onmouseover="animationArticle('proj6')" onmouseout="stopAnimationArticle('proj6')">
+                                <div class="timeline-time">
+                                    Juin<small>2021</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <i class="icon-code"></i>
+                                    <h4>Jeu du pong</h4>
+                                    <p>
+                                        Ce projet est une idée commencé en cours au lycée en Terminale STI2D et fini personnellement. Le jeu du pong est un jeu à 2 joueurs où chacun doit renvoyer une balle avant qu'elle 
+                                        touche le mur adverse. Il a été fait sous Processing.
+                                    </p>
+                                    <div class="btn">
+                                        <input type="button" class="btn btn-warning" value="Voir plus &#10132">
+                                    </div>
+                                    <div class="">
+                                        <span class="badge badge-pill">Jeu</span>
+                                        <span class="badge badge-pill">IHM</span>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- <div class="timeline-row">
+                                <div class="timeline-content">
+                                    <p class="m-0">Loading...</p>
+                                </div>
+                            </div> -->
+                    
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <h4>Mathias Pochot</h4>
+    </footer>
+</html>
+<script>
+    function  openNav(){
+        document.getElementById("sideNav").style.width = "250px";
+    }
+    function closeNav(){
+        document.getElementById("sideNav").style.width = "0px";
+    }
+    function animationArticle(id){
+        document.getElementById(id).style.transform = "scale(1.1)";
+    }
+    function stopAnimationArticle(id){
+        document.getElementById(id).style.transform = "scale(1.0)";
+    }
+</script>
