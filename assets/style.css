@@ -4,81 +4,314 @@ body{
     color: #fff;
 }
 
+@media screen and (max-width: 767px){
+    header{
+        background-color: #000;
+        display: flex;
+        flex-direction: row;
+    }
+    header h1{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        content: "Portfolio";
+    }
+    #sideNav{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden; /*Cache ce qui dépasse de l'élément (width=0 ici)*/
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    #sideNav a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    #sideNav a:hover{
+        color: #f1f1f1;
+    }
+    #sideNav #closebtn{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
 
 
-header{
-    background-color: #000;
-    display: flex;
-    flex-direction: row;
-}
-header h1{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-#sideNav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden; /*Cache ce qui dépasse de l'élément (width=0 ici)*/
-    transition: 0.5s;
-    padding-top: 60px;
-}
-#sideNav a{
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-#sideNav a:hover{
-    color: #f1f1f1;
-}
-#sideNav #closebtn{
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    footer{
+        background-color: #000;
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    footer h4{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    #presentation{
+        display: flex;
+        flex-direction: row;
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+    #presentation #img{
+        display: none;
+    }
+    #presentation #textPresentation{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #presentation #textPresentation h3{
+        text-decoration: underline;
+    }
+
+
+    .lesBlocs{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-top: 20%;
+        transition: transform 330ms;
+    }
+    .lesBlocs h3{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: underline;
+    }
+
+    #competences a{
+        padding-top: 10px;
+        padding-left: 10px;
+        border-left: #fff 2px solid;
+        text-align: start;
+    }
+
+
+    #etudes a{
+        padding-top: 10px;
+        padding-right: 10px;
+        border-right: #fff 2px solid;
+        text-align: end;
+    }
+
+
+    #experiencesPro a{
+        padding-top: 10px;
+        padding-left: 10px;
+        border-left: #fff 2px solid;
+        text-align: start;
+    }
+
+
+    #loisirs p{
+        padding-top: 10px;
+        padding-right: 10px;
+        border-right: #fff 2px solid;
+        text-align: end;
+    }
+
+
+    #veille p{
+        padding-top: 10px;
+        padding-left: 10px;
+        border-left: #fff 2px solid;
+        text-align: start;
+    }
+
+
+    #realisation h3{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 
-footer{
-    background-color: #000;
-    display: flex;
-    flex-direction: row;
-    margin-top: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-footer h4{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+@media screen and (min-width: 767px){
+    header{
+        background-color: #000;
+        display: flex;
+        flex-direction: row;
+    }
+    header h1{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #sideNav{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden; /*Cache ce qui dépasse de l'élément (width=0 ici)*/
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    #sideNav a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    #sideNav a:hover{
+        color: #f1f1f1;
+    }
+    #sideNav #closebtn{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    
+    footer{
+        background-color: #000;
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    footer h4{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    #presentation{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    #presentation #img{
+        margin-left: 5%;
+        margin-right: 20%;
+    }
+    #presentation #textPresentation{
+        margin-left: 20%;
+        margin-right: 15%;
+    }
+    #presentation #textPresentation h3{
+        text-decoration: underline;
+    }
 
 
-#presentation{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-#presentation #img{
-    margin-left: 5%;
-    margin-right: 20%;
-}
-#presentation #textPresentation{
-    margin-left: 20%;
-    margin-right: 15%;
-}
-#presentation #textPresentation h3{
-    text-decoration: underline;
+    .lesBlocs h3{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    #competences{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 60%;
+        transition: transform 330ms;
+    }
+    #competences a{
+        padding-top: 10px;
+        border-top: #fff 2px solid;
+        padding-left: 10px;
+        border-left: #fff 2px solid;
+    }
+    
+    
+    #etudes{
+        display: flex;
+        flex-direction: column;
+        margin-right: 5%;
+        margin-left: 60%;
+        transition: transform 330ms;
+    }
+    #etudes a{
+        padding-top: 10px;
+        border-top: #fff 2px solid;
+        padding-right: 10px;
+        border-right: #fff 2px solid;
+    }
+    
+    
+    #experiencesPro{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 60%;
+        transition: transform 330ms;
+    }
+    #experiencesPro a{
+        padding-top: 10px;
+        border-top: #fff 2px solid;
+        padding-left: 10px;
+        border-left: #fff 2px solid;
+    }
+    
+    
+    #loisirs{
+        display: flex;
+        flex-direction: column;
+        margin-right: 5%;
+        margin-left: 60%;
+        transition: transform 330ms;
+    }
+    #loisirs p{
+        padding-top: 10px;
+        border-top: #fff 2px solid;
+        padding-right: 10px;
+        border-right: #fff 2px solid;
+    }
+    
+    
+    #veille{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 60%;
+        transition: transform 330ms;
+    }
+    #veille p{
+        padding-top: 10px;
+        border-top: #fff 2px solid;
+        padding-left: 10px;
+        border-left: #fff 2px solid;
+    }
+
+
+    #realisation h3{
+        margin-left: 45%;
+        margin-right: 45%;
+        text-align: center;
+    }
+    hr{
+        width: auto;
+    }
 }
 
 
@@ -94,115 +327,6 @@ footer h4{
     flex-direction: column;
 }
 
-
-#competences{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5%;
-    margin-right: 60%;
-    transition: transform 330ms;
-}
-#competences a{
-    padding-top: 10px;
-    border-top: #fff 2px solid;
-    padding-left: 10px;
-    border-left: #fff 2px solid;
-}
-#competence h3{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-#etudes{
-    display: flex;
-    flex-direction: column;
-    margin-right: 5%;
-    margin-left: 60%;
-    transition: transform 330ms;
-}
-#etudes a{
-    padding-top: 10px;
-    border-top: #fff 2px solid;
-    padding-right: 10px;
-    border-right: #fff 2px solid;
-}
-#etudes h3{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-#experiencesPro{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5%;
-    margin-right: 60%;
-    transition: transform 330ms;
-}
-#experiencesPro a{
-    padding-top: 10px;
-    border-top: #fff 2px solid;
-    padding-left: 10px;
-    border-left: #fff 2px solid;
-}
-#experiencesPro h3{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-#loisirs{
-    display: flex;
-    flex-direction: column;
-    margin-right: 5%;
-    margin-left: 60%;
-    transition: transform 330ms;
-}
-#loisirs p{
-    padding-top: 10px;
-    border-top: #fff 2px solid;
-    padding-right: 10px;
-    border-right: #fff 2px solid;
-}
-#loisirs h3{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-#veille{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5%;
-    margin-right: 60%;
-    transition: transform 330ms;
-}
-#veille p{
-    padding-top: 10px;
-    border-top: #fff 2px solid;
-    padding-left: 10px;
-    border-left: #fff 2px solid;
-}
-#veille h3{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-#realisation h3{
-    margin-left: 45%;
-    margin-right: 45%;
-    text-align: center;
-}
-hr{
-    width: auto;
-}
 
 .timeline {
     position: relative;
