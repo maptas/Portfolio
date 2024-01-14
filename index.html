@@ -46,7 +46,10 @@
                         </ul>
                     </p>
                     <ul>
-                        <li><input type="button" value="Télécharger CV &#10132;" class="btn btn-warning" id="btnCV"></li>
+                        <li>
+                            <!-- <input type="button" value="Télécharger CV &#10132;" class="btn btn-warning" id="btnCV" href="assets/download/CV_MathiasPochot.pdf" download="CV_MathiasPochot"> -->
+                            <a class="btn btn-warning" id="btnCV" type="button" href="assets/download/CV_MathiasPochot.pdf" download="CV_MathiasPochot">Télécharger CV &#10132;</a>
+                        </li>
                         <li><input type="button" value="Tableau de compétences &#10132;" class="btn btn-warning"></li>
                     </ul>
                 </article>
@@ -126,7 +129,7 @@
                 </article>
             </section>
             <section id="realisation">
-                <h3 id="titreRealisaton">Mes réalisations<hr/></h3>
+                <h3 class="titreSection">Mes réalisations<hr/></h3>
                 <div class="container">
                     <div class="timeline">
                             <div class="timeline-row" id="proj1" onmouseover="animationArticle('proj1')" onmouseout="stopAnimationArticle('proj1')">
@@ -262,9 +265,30 @@
                                     <p class="m-0">Loading...</p>
                                 </div>
                             </div> -->
-                    
                     </div>
                 </div>
+            </section>
+            <section>
+                <article class="contact">
+                    <h3 class="titreSection">Formulaire de contact<hr/></h3>
+                    <form>
+                        <div class="form-group ">
+                            <label for="NomPrenom">Entrez votre nom :</label>
+                            <input type="text" name="NomPrenom" id="NomPrenom" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Entrez votre email :</label>
+                            <input type="email" name="email" id="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Entrez votre email :</label>
+                            <input type="text" name="message" id="message" class="form-control">
+                        </div>
+                        <div>
+                            <input type="button" id="btnEnvoyer" class="btn btn-warning" value="Envoyer">
+                        </div>
+                    </form>
+                </article>
             </section>
         </main>
     </body>

@@ -136,8 +136,16 @@ body{
     }
 
 
-    #realisation h3{
+    .titreSection{
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .contact form div #btnEnvoyer{
+        margin-top: 30px;
+        display: flex;
         margin-left: auto;
         margin-right: auto;
     }
@@ -304,13 +312,17 @@ body{
     }
 
 
-    #realisation h3{
+    .titreSection{
         margin-left: 45%;
         margin-right: 45%;
         text-align: center;
     }
     hr{
         width: auto;
+    }
+
+    .contact form div #btnEnvoyer{
+        margin-top: 30px;
     }
 }
 
@@ -325,6 +337,21 @@ body{
 #theInfo{
     display: flex;
     flex-direction: column;
+}
+
+
+.contact{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.contact form div .form-control{
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+.contact form div #btnEnvoyer{
+    margin-top: 30px;
 }
 
 
