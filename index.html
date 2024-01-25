@@ -12,7 +12,7 @@
         <meta name="keywords" content="Portfolio, Mathias Pochot, Pochot, BTS SIO"/>
         <title>Portfolio - Mathias Pochot</title>
     </head>
-    <body>
+    <body id="body">
         <header>
             <div id="sideNav">
                 <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
@@ -22,6 +22,7 @@
                 <a href="#experiencesPro">Expériences professionnelles</a>
                 <a href="#loisirs">Loisirs</a>
                 <a href="#realisation">Réalisations</a>
+                <a href="#contact">Contact</a>
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
             <h1>Portfolio - Mathias Pochot</h1>
@@ -76,7 +77,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning" id="btnVoirPlus">
+                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('competences')">
                     </a>
                 </article>
                 <article class="lesBlocs" id="etudes" onmouseover="animationArticle('etudes')" onmouseout="stopAnimationArticle('etudes')">
@@ -87,7 +88,7 @@
                             <li>1ère année BUT Informatique</li>
                             <li>BTS SIO</li>
                         </ul>
-                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning" id="btnVoirPlus">
+                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('etudes')">
                     </a>
                 </article>
                 <article class="lesBlocs" id="experiencesPro" onmouseover="animationArticle('experiencesPro')" onmouseout="stopAnimationArticle('experiencesPro')">
@@ -113,7 +114,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning" id="btnVoirPlus">
+                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('experiencesPro')">
                     </a>
                 </article>
                 <article class="lesBlocs" id="loisirs" onmouseover="animationArticle('loisirs')" onmouseout="stopAnimationArticle('loisirs')">
@@ -269,24 +270,25 @@
                 </div>
             </section>
             <section>
-                <article class="contact">
-                    <h3 class="titreSection">Formulaire de contact<hr/></h3>
+                <h3 id="titreFormulaireContact" onmouseover="formConntactOver()" onmouseout="formConntactOut()" onclick="formContactOpen()">Formulaire de contact &#10132;</h3>
+                <article id="formulaireContact">
                     <form>
-                        <div class="form-group ">
-                            <label for="NomPrenom">Entrez votre nom :</label>
+                        <div class="form-group" id="nomPrenom">
+                            <label for="NomPrenom">Entrez votre Nom / Prénom :</label>
                             <input type="text" name="NomPrenom" id="NomPrenom" class="form-control">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="email">
                             <label for="email">Entrez votre email :</label>
                             <input type="email" name="email" id="email" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label for="message">Entrez votre email :</label>
+                        <div class="form-group" id="message">
+                            <label for="message">Entrez votre message :</label>
                             <input type="text" name="message" id="message" class="form-control">
                         </div>
-                        <div>
+                        <div id="valider">
                             <input type="button" id="btnEnvoyer" class="btn btn-warning" value="Envoyer">
                         </div>
+                        <span id="closeForm" onmouseover="closeFormOver()" onmouseout="closeFormOut()" onclick="formContactClose()">Fermer</span>
                     </form>
                 </article>
             </section>
@@ -303,10 +305,50 @@
     function closeNav(){
         document.getElementById("sideNav").style.width = "0px";
     }
+
     function animationArticle(id){
         document.getElementById(id).style.transform = "scale(1.1)";
     }
     function stopAnimationArticle(id){
         document.getElementById(id).style.transform = "scale(1.0)";
+    }
+
+    function formConntactOver(){
+        document.getElementById("titreFormulaireContact").style.textDecoration = "underline";
+        document.getElementById("titreFormulaireContact").style.transform = "scale(1.05)";
+        document.getElementById("titreFormulaireContact").style.marginLeft = "50px";
+    }
+    function formConntactOut(){
+        document.getElementById("titreFormulaireContact").style.textDecoration = "none";
+        document.getElementById("titreFormulaireContact").style.transform = "scale(1.0)";
+        document.getElementById("titreFormulaireContact").style.marginLeft = "30px";
+    }
+    function formContactOpen(){
+        document.getElementById("formulaireContact").style.height = "100%";
+    }
+    function formContactClose(){
+        document.getElementById("formulaireContact").style.height = "0px";
+    }
+    function closeFormOver(){
+        document.getElementById("closeForm").style.textDecoration = "underline";
+    }
+    function closeFormOut(){
+        document.getElementById("closeForm").style.textDecoration = "none";
+    }
+
+    function doAnimation(id){
+        document.getElementById("body").animate(
+            [
+                { transform: "translateX(0px)" },
+                { transform: "translateX(-100%)" },
+            ],
+            {
+                duration: 1000,
+            }
+        )
+        //maintenant, il faut créer les autres pages pour chaque block (voir plus) dans d'autres fichiers si possible
+        //trouver un moyen de prendre ces fichiers sans recharger les pages
+        //faire le changement de page dans cette fonction à la fin de l'animation
+        //voir https://www.blogduwebdesign.com/blog/developpement/mettre-en-place-navigation-sans-rechargement.html
     }
 </script>
