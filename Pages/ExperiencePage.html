@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg" href="assets/img/iconPortfolio.png"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <meta name="author" content="Mathias Pochot" />
+        <meta name="description" content="Portfolio - Mathias Pochot" />
+        <meta name="keywords" content="Portfolio, Mathias Pochot, Pochot, BTS SIO"/>
+        <title>Portfolio - Mathias Pochot</title>
+    </head>
+    <body id="body">
+        <header>
+            <div id="sideNav">
+                <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#presentation">Présentation</a>
+                <a href="#competences">Compétences</a>
+                <a href="#etudes">Etudes</a>
+                <a href="#experiencesPro">Expériences professionnelles</a>
+                <a href="#loisirs">Loisirs</a>
+                <a href="#realisation">Réalisations</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <h1>Portfolio - Mathias Pochot</h1>
+        </header>
+        <main id="content">
+            <section id="presentation">
+                <article id="img"><img src="assets/img/imgEcureuil.jpg"></article>
+                <article id="textPresentation">
+                    <h3>Présentation</h3>
+                    <p>
+                        <ul>
+                            <li>Etudiant Bac+2 BTS SIO option SLAM</li>
+                            <li>20 ans</li>
+                        </ul>
+                    </p>
+                    <h3>Contact</h3>
+                    <p>
+                        <ul>
+                            <li>mathiaspochot@gmail.com</li>
+                            <li>GitHub : maptas</li>
+                            <li>Instagram : mathias_pcht</li>
+                        </ul>
+                    </p>
+                    <ul>
+                        <li>
+                            <!-- <input type="button" value="Télécharger CV &#10132;" class="btn btn-warning" id="btnCV" href="assets/download/CV_MathiasPochot.pdf" download="CV_MathiasPochot"> -->
+                            <a class="btn btn-warning" id="btnCV" type="button" href="assets/download/CV_MathiasPochot.pdf" download="CV_MathiasPochot">Télécharger CV &#10132;</a>
+                        </li>
+                        <li><input type="button" value="Tableau de compétences &#10132;" class="btn btn-warning"></li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <h4>Mathias Pochot</h4>
+    </footer>
+</html>
+
+
+
+<script>
+    function  openNav(){
+        document.getElementById("sideNav").style.width = "250px";
+    }
+    function closeNav(){
+        document.getElementById("sideNav").style.width = "0px";
+    }
+
+    function animationArticle(id){
+        document.getElementById(id).style.transform = "scale(1.1)";
+    }
+    function stopAnimationArticle(id){
+        document.getElementById(id).style.transform = "scale(1.0)";
+    }
+
+    function formConntactOver(){
+        document.getElementById("titreFormulaireContact").style.textDecoration = "underline";
+        document.getElementById("titreFormulaireContact").style.transform = "scale(1.05)";
+        document.getElementById("titreFormulaireContact").style.marginLeft = "50px";
+    }
+    function formConntactOut(){
+        document.getElementById("titreFormulaireContact").style.textDecoration = "none";
+        document.getElementById("titreFormulaireContact").style.transform = "scale(1.0)";
+        document.getElementById("titreFormulaireContact").style.marginLeft = "30px";
+    }
+    function formContactOpen(){
+        document.getElementById("formulaireContact").style.height = "100%";
+    }
+    function formContactClose(){
+        document.getElementById("formulaireContact").style.height = "0px";
+    }
+    function closeFormOver(){
+        document.getElementById("closeForm").style.textDecoration = "underline";
+    }
+    function closeFormOut(){
+        document.getElementById("closeForm").style.textDecoration = "none";
+    }
+
+    function doAnimation(id){
+        document.getElementById("body").animate(
+            [
+                { transform: "translateX(0px)" },
+                { transform: "translateX(-100%)" },
+            ],
+            {
+                duration: 1000,
+            }
+        )
+        //maintenant, il faut créer les autres pages pour chaque block (voir plus) dans d'autres fichiers si possible
+        //trouver un moyen de prendre ces fichiers sans recharger les pages -> ajax jquery
+        //jquery permet également de faire des animations
+        //faire le changement de page dans cette fonction à la fin de l'animation
+        //voir https://www.blogduwebdesign.com/blog/developpement/mettre-en-place-navigation-sans-rechargement.html
+    }
+
+    $(document).ready(function(){
+  
+    /* Au clic sur un élément de menu... */
+        $('#btnExperience').click(function(event){
+            
+            /* On récupère l'url du lien sur lequel on vient de cliquer. */
+            var url = $(this).attr('href');
+            
+            /*
+            * Dans notre bloc #content, on inject le contenu
+            * de la page ciblée (par le href) en se limitant
+            * à ce qui est dans le bloc #content.
+            */
+            $('#content').load(url + " #content");
+            
+            /*
+            * On évite le comportement par défaut qui est de 
+            * nous envoyer sur la page donnée dans le href).
+            */
+            event.preventDefault();
+        });
+    
+    });
+</script>
