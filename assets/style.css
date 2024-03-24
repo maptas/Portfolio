@@ -163,6 +163,12 @@ body{
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+        margin: 20px auto;
+    }
+    header span{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 15px;
     }
     #sideNav{
         height: 100%;
