@@ -96,7 +96,7 @@ body{
         text-decoration: underline;
     }
 
-    #competences a{
+    #competences #textCompe{
         padding-top: 10px;
         padding-left: 10px;
         border-left: #fff 2px solid;
@@ -104,7 +104,7 @@ body{
     }
 
 
-    #etudes a{
+    #etudes #textEtude{
         padding-top: 10px;
         padding-right: 10px;
         border-right: #fff 2px solid;
@@ -112,7 +112,7 @@ body{
     }
 
 
-    #experiencesPro a{
+    #experiencesPro #textExpe{
         padding-top: 10px;
         padding-left: 10px;
         border-left: #fff 2px solid;
@@ -244,7 +244,7 @@ body{
         margin-right: 60%;
         transition: transform 330ms;
     }
-    #competences a{
+    #competences #textCompe{
         padding-top: 10px;
         border-top: #fff 2px solid;
         padding-left: 10px;
@@ -259,7 +259,7 @@ body{
         margin-left: 60%;
         transition: transform 330ms;
     }
-    #etudes a{
+    #etudes #textEtude{
         padding-top: 10px;
         border-top: #fff 2px solid;
         padding-right: 10px;
@@ -274,7 +274,7 @@ body{
         margin-right: 60%;
         transition: transform 330ms;
     }
-    #experiencesPro a{
+    #experiencesPro #textExpe{
         padding-top: 10px;
         border-top: #fff 2px solid;
         padding-left: 10px;

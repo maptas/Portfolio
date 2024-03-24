@@ -58,7 +58,7 @@
             <section id="theInfo">
                 <article class="lesBlocs" id="competences" onmouseover="animationArticle('competences')" onmouseout="stopAnimationArticle('competences')">
                     <h3>Mes compétences</h3>
-                    <a>
+                    <a id="textCompe">
                         <ul>
                             <li>
                                 Programmation Logiciel
@@ -77,23 +77,29 @@
                                 </ul>
                             </li>
                         </ul>
-                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('competences')">
+                        <!-- <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('competences')"> -->
+                        <a href="Pages/CompetencesPage.html" style="text-decoration:none">
+                            <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('competences')">
+                        </a>
                     </a>
                 </article>
                 <article class="lesBlocs" id="etudes" onmouseover="animationArticle('etudes')" onmouseout="stopAnimationArticle('etudes')">
                     <h3>Mes études</h3>
-                    <a>
+                    <a id="textEtude">
                         <ul>
                             <li>Bac Technologique STI2D</li>
                             <li>1ère année BUT Informatique</li>
                             <li>BTS SIO</li>
                         </ul>
-                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('etudes')">
+                        <!-- <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('etudes')"> -->
+                        <a href="Pages/EtudesPage.html" style="text-decoration:none">
+                            <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" onclick="doAnimation('etudes')">
+                        </a>
                     </a>
                 </article>
                 <article class="lesBlocs" id="experiencesPro" onmouseover="animationArticle('experiencesPro')" onmouseout="stopAnimationArticle('experiencesPro')">
                     <h3>Mes expériences professionnelles</h3>
-                    <a>
+                    <a id="textExpe">
                         <ul>
                             <li>
                                 Stages
@@ -115,7 +121,10 @@
                             </li>
                             <!-- onclick="doAnimation('experiencesPro')" -->
                         </ul>
-                        <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" id="btnExperience" href="Pages/ExperiencePage.html">
+                        <!-- <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" id="btnExperience" href="Pages/ExperiencePage.html"> -->
+                        <a href="Pages/ExperiencePage.html" style="text-decoration:none">
+                            <input type="button" value="Voir Plus &#10132;" class="btn btn-warning btnVoirPlus" id="btnExperience">
+                        </a>
                     </a>
                 </article>
                 <article class="lesBlocs" id="loisirs" onmouseover="animationArticle('loisirs')" onmouseout="stopAnimationArticle('loisirs')">
